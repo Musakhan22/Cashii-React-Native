@@ -20,7 +20,7 @@ const WelcomeScreen = () => {
       <View style={styles.imagecon}>
         <Image source={require('../assets/images/welcome.png')} />
       </View>
-      <View style={{marginTop: hp('17%')}}>
+      <View style={{marginTop: hp('10%')}}>
         <Custombutton
           text={'Get Started'}
           onpress={() => navigation.navigate('connectWallet')}
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'column',
     marginTop: hp('10%'),
-    width: wp('70%'),
+    width: wp('85%'),
   },
   headertext: {
     fontSize: 48,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     color: appColors.txtblack,
   },
   imagecon: {
-    marginTop: hp('15%'),
+    marginTop: hp('18%'),
     alignItems: 'center',
   },
 });
