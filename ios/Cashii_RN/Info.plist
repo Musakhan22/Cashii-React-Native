@@ -49,26 +49,25 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Fontspring-DEMO-rocgrotesk-bold.otf</string>
-		<string>Fontspring-DEMO-rocgrotesk-medium.otf</string>
-		<string>Fontspring-DEMO-rocgrotesk-regular.otf</string>
-		<string>Fontspring-DEMO-rocgrotesk-thin.otf</string>
-		<string>Fontspring-DEMO-rocgroteskcomp-bold.otf</string>
-		<string>Fontspring-DEMO-rocgroteskcomp-medium.otf</string>
-		<string>Fontspring-DEMO-rocgroteskcomp-regular.otf</string>
-		<string>Manrope-Bold.ttf</string>
-		<string>Manrope-ExtraBold.ttf</string>
-		<string>Manrope-ExtraLight.ttf</string>
-		<string>Manrope-Light.ttf</string>
-		<string>Manrope-Medium.ttf</string>
-		<string>Manrope-Regular.ttf</string>
-		<string>Manrope-SemiBold.ttf</string>
-		<string>Manrope-VariableFont_wght.ttf</string>
-		<string>Poppins-Bold.ttf</string>
-		<string>Poppins-ExtraLight.ttf</string>
-		<string>Poppins-Medium.ttf</string>
-		<string>Poppins-Regular.ttf</string>
-		<string>Poppins-SemiBold.ttf</string>
+		<string>FontspringDEMOrocgroteskbold.otf</string>
+		<string>FontspringDEMOrocgroteskcompbold.otf</string>
+		<string>FontspringDEMOrocgroteskcompmedium.otf</string>
+		<string>FontspringDEMOrocgroteskcompregular.otf</string>
+		<string>FontspringDEMOrocgroteskmedium.otf</string>
+		<string>FontspringDEMOrocgroteskregular.otf</string>
+		<string>FontspringDEMOrocgroteskthin.otf</string>
+		<string>ManropeBold.ttf</string>
+		<string>ManropeExtraBold.ttf</string>
+		<string>ManropeExtraLight.ttf</string>
+		<string>ManropeLight.ttf</string>
+		<string>ManropeMedium.ttf</string>
+		<string>ManropeRegular.ttf</string>
+		<string>ManropeSemiBold.ttf</string>
+		<string>PoppinsBold.ttf</string>
+		<string>PoppinsExtraLight.ttf</string>
+		<string>PoppinsMedium.ttf</string>
+		<string>PoppinsRegular.ttf</string>
+		<string>PoppinsSemiBold.ttf</string>
 	</array>
 </dict>
 </plist>

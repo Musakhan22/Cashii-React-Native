@@ -1,19 +1,32 @@
-/* eslint-disable prettier/prettier */
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {useNavigation} from '@react-navigation/native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
 import appColors from '../components/appcolors';
+import Custombutton from '../components/custombutton';
 
 const WelcomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.main}>
       <View style={styles.headercon}>
-        <Text>Meet the</Text>
-        <Text>Future Wallet</Text>
+        <Text style={styles.headertext}>Meet the</Text>
+        <Text style={styles.headertext}>Future Wallet</Text>
+      </View>
+      <View style={styles.imagecon}>
+        <Image source={require('../assets/images/welcome.png')} />
+      </View>
+      <View style={{marginTop: hp('17%')}}>
+        <Custombutton
+          text={'Get Started'}
+          onpress={() => navigation.navigate('connectWallet')}
+          color={appColors.Btnblack}
+          textclr={appColors.maincolor}
+        />
       </View>
     </SafeAreaView>
   );
@@ -30,8 +43,16 @@ const styles = StyleSheet.create({
   headercon: {
     alignItems: 'center',
     flexDirection: 'column',
-    borderWidth: 2,
-    marginTop: hp('5%'),
-    width: wp('50%'),
+    marginTop: hp('10%'),
+    width: wp('70%'),
+  },
+  headertext: {
+    fontSize: 48,
+    fontFamily: 'ManropeExtraBold',
+    color: appColors.txtblack,
+  },
+  imagecon: {
+    marginTop: hp('15%'),
+    alignItems: 'center',
   },
 });
