@@ -1,0 +1,85 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Fontspring-DEMO-rocgrotesk-bold.otf",
+      "sha1": "94ffac3eebae58d2a8d634991062bd2fe67a7fe5"
+    },
+    {
+      "path": "assets/fonts/Fontspring-DEMO-rocgrotesk-medium.otf",
+      "sha1": "2c82ff419a8c7fcb2efc94935512ecf2f164cfdd"
+    },
+    {
+      "path": "assets/fonts/Fontspring-DEMO-rocgrotesk-regular.otf",
+      "sha1": "4114ff6fae73cf5aae606338ba522b9846739181"
+    },
+    {
+      "path": "assets/fonts/Fontspring-DEMO-rocgrotesk-thin.otf",
+      "sha1": "0b41f9f9c75f3cb4d985723333e816a5fb78f001"
+    },
+    {
+      "path": "assets/fonts/Fontspring-DEMO-rocgroteskcomp-bold.otf",
+      "sha1": "e4dd64485656e62bceab0e65c84d8b01ae826789"
+    },
+    {
+      "path": "assets/fonts/Fontspring-DEMO-rocgroteskcomp-medium.otf",
+      "sha1": "aeda118f441d9a8c72ec01077f6676284ab4cd02"
+    },
+    {
+      "path": "assets/fonts/Fontspring-DEMO-rocgroteskcomp-regular.otf",
+      "sha1": "a47bebafd09e0bc7bdf7da6c4b6d924f1b8c1984"
+    },
+    {
+      "path": "assets/fonts/Manrope-Bold.ttf",
+      "sha1": "3297f28b686587cd09e3e893f154cdcb4574b88c"
+    },
+    {
+      "path": "assets/fonts/Manrope-ExtraBold.ttf",
+      "sha1": "e6a02bf01d7a837e9a1e4f362d65915ce0afddd5"
+    },
+    {
+      "path": "assets/fonts/Manrope-ExtraLight.ttf",
+      "sha1": "360720be4bf6cf739ffa8deab58937001ca53328"
+    },
+    {
+      "path": "assets/fonts/Manrope-Light.ttf",
+      "sha1": "262d13b5cb204b9847d91d8cd0a51a8fe41e18d6"
+    },
+    {
+      "path": "assets/fonts/Manrope-Medium.ttf",
+      "sha1": "5ea1634f3a287a3090e260ac53a4165a54a0b972"
+    },
+    {
+      "path": "assets/fonts/Manrope-Regular.ttf",
+      "sha1": "48472c71ff9813dc91c0cb365e3842141c26745a"
+    },
+    {
+      "path": "assets/fonts/Manrope-SemiBold.ttf",
+      "sha1": "bddda86b0acdca04d282660d7c5175e30fd6b35c"
+    },
+    {
+      "path": "assets/fonts/Manrope-VariableFont_wght.ttf",
+      "sha1": "79105b278f576486dda90139fe564b27b5960268"
+    },
+    {
+      "path": "assets/fonts/Poppins-Bold.ttf",
+      "sha1": "3bc8164396c3e6c1e4fae0cf2a51ea66381c1c2d"
+    },
+    {
+      "path": "assets/fonts/Poppins-ExtraLight.ttf",
+      "sha1": "85af6582a7e6155917c605f9d3fed68c02b23b06"
+    },
+    {
+      "path": "assets/fonts/Poppins-Medium.ttf",
+      "sha1": "283f21b44efbdbf276ba802be2d949a36bbc4233"
+    },
+    {
+      "path": "assets/fonts/Poppins-Regular.ttf",
+      "sha1": "52f9413b264e8ecefbbf12830e3dfadebbf72986"
+    },
+    {
+      "path": "assets/fonts/Poppins-SemiBold.ttf",
+      "sha1": "8a4ace9392d06bcb7f8ea2f5169b07e4c383a90d"
+    }
+  ]
+}
