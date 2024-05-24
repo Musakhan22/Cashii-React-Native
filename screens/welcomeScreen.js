@@ -7,7 +7,7 @@ import {
 } from 'react-native-responsive-screen';
 
 import appColors from '../components/appcolors';
-import Custombutton from '../components/custombutton';
+import Custombutton from '../components/custombutton.jsx';
 
 const WelcomeScreen = () => {
   const navigation = useNavigation();

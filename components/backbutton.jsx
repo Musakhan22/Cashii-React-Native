@@ -6,7 +6,7 @@ import {
 } from 'react-native-responsive-screen';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-import appColors from '../components/appcolors';
+import appColors from './appcolors';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const Backbutton = ({icon, onPress}) => {

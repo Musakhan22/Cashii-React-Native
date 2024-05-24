@@ -1,6 +1,5 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView, FlatList} from 'react-native';
 import React from 'react';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {useNavigation} from '@react-navigation/native';
 import {
   widthPercentageToDP as wp,
@@ -9,31 +8,36 @@ import {
 
 import appColors from '../components/appcolors';
 import Backbutton from '../components/backbutton';
-import Textinput from '../components/textinput';
+import Griditems from '../components/griditems';
+import Customiconbutton from '../components/customiconbutton';
 
-const CreatePasswordScreen = () => {
+const SecretPhraseScreen = () => {
   const navigation = useNavigation();
+
   return (
     <SafeAreaView style={styles.main}>
       <View style={styles.backbuttoncon}>
         <Backbutton onPress={() => navigation.goBack()} />
       </View>
       <View style={styles.headercon}>
-        <Text style={styles.headertext}>Create</Text>
-        <Text style={styles.headertext}>Passcode</Text>
+        <Text style={styles.headertext}>Secret Phrase</Text>
       </View>
       <View style={styles.subtitlecon}>
         <Text style={styles.subtitletext}>
-          Adds an extra layer of security when using
+          Save your 12 word phrase into a safe place{' '}
         </Text>
-        <Text style={styles.subtitletext}>the app.</Text>
+        <Text style={styles.subtitletext}> on your own.</Text>
       </View>
-      <Textinput/>
+      <Griditems />
+      <View style={styles.footercontainer}>
+        <Customiconbutton />
+        <Text>Copy</Text>
+      </View>
     </SafeAreaView>
   );
 };
 
-export default CreatePasswordScreen;
+export default SecretPhraseScreen;
 
 const styles = StyleSheet.create({
   main: {
@@ -41,11 +45,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     color: appColors.maincolor,
   },
+  backbuttoncon: {
+    width: wp('75%'),
+    marginTop: hp('4%'),
+    marginRight: wp('14%'),
+  },
   headercon: {
     alignItems: 'center',
     flexDirection: 'column',
     marginTop: hp('7%'),
-    width: wp('70%'),
+    width: wp('85%'),
   },
   headertext: {
     fontSize: 48,
@@ -62,9 +71,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: appColors.subtxt,
   },
-  backbuttoncon: {
-    width: wp('75%'),
+  footercontainer: {
+    width: wp('60%'),
+    alignItems: 'center',
+    borderWidth: 2,
     marginTop: hp('4%'),
-    marginRight: wp('14%'),
+    flexDirection: 'row',
   },
 });

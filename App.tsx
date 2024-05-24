@@ -9,6 +9,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import WelcomeScreen from './screens/welcomeScreen';
 import ConnectWalletScreen from './screens/connectWalletScreen';
 import CreatePasswordScreen from './screens/createPasswordScreen';
+import SecretPhraseScreen from './screens/secretPhraseScreen';
 
 const Stack = createStackNavigator();
 
@@ -26,7 +27,7 @@ export default function App() {
         <Stack.Screen name="welcome" component={WelcomeScreen} />
         <Stack.Screen name="connectWallet" component={ConnectWalletScreen} />
         <Stack.Screen name="createPassword" component={CreatePasswordScreen} />
-
+        <Stack.Screen name='secretPhrase' component={SecretPhraseScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

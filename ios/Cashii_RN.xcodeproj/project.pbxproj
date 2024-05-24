@@ -38,7 +38,7 @@
 /* Begin PBXContainerItemProxy section */
 		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			containerPortal = 83CBB9F71A601CBA00E9B192;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = Cashii_RN;
@@ -64,25 +64,25 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Cashii_RN/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Cashii_RN-Cashii_RNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cashii_RN-Cashii_RNTests.release.xcconfig"; path = "Target Support Files/Pods-Cashii_RN-Cashii_RNTests/Pods-Cashii_RN-Cashii_RNTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		AD45A38747EE439196FE28C1 /* FontspringDEMOrocgroteskbold.otf */ = {isa = PBXFileReference; name = "FontspringDEMOrocgroteskbold.otf"; path = "../assets/fonts/FontspringDEMOrocgroteskbold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		ABA51AD35B634779A26F2E14 /* FontspringDEMOrocgroteskcompbold.otf */ = {isa = PBXFileReference; name = "FontspringDEMOrocgroteskcompbold.otf"; path = "../assets/fonts/FontspringDEMOrocgroteskcompbold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C4E400C1779842E098667506 /* FontspringDEMOrocgroteskcompmedium.otf */ = {isa = PBXFileReference; name = "FontspringDEMOrocgroteskcompmedium.otf"; path = "../assets/fonts/FontspringDEMOrocgroteskcompmedium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1DEC0E35329C48B2B1004D62 /* FontspringDEMOrocgroteskcompregular.otf */ = {isa = PBXFileReference; name = "FontspringDEMOrocgroteskcompregular.otf"; path = "../assets/fonts/FontspringDEMOrocgroteskcompregular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1A212182D91246438AF54EBE /* FontspringDEMOrocgroteskmedium.otf */ = {isa = PBXFileReference; name = "FontspringDEMOrocgroteskmedium.otf"; path = "../assets/fonts/FontspringDEMOrocgroteskmedium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		98ECA66AC9D6452D8E335604 /* FontspringDEMOrocgroteskregular.otf */ = {isa = PBXFileReference; name = "FontspringDEMOrocgroteskregular.otf"; path = "../assets/fonts/FontspringDEMOrocgroteskregular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5CA8DFB3E54E443D90205B02 /* FontspringDEMOrocgroteskthin.otf */ = {isa = PBXFileReference; name = "FontspringDEMOrocgroteskthin.otf"; path = "../assets/fonts/FontspringDEMOrocgroteskthin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E2790A2EF8714C928F786A88 /* ManropeBold.ttf */ = {isa = PBXFileReference; name = "ManropeBold.ttf"; path = "../assets/fonts/ManropeBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4633A5CD809D482680639243 /* ManropeExtraBold.ttf */ = {isa = PBXFileReference; name = "ManropeExtraBold.ttf"; path = "../assets/fonts/ManropeExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4750F8C2E78E406DA49CE086 /* ManropeExtraLight.ttf */ = {isa = PBXFileReference; name = "ManropeExtraLight.ttf"; path = "../assets/fonts/ManropeExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5D09CDD2A8F94A71855FE398 /* ManropeLight.ttf */ = {isa = PBXFileReference; name = "ManropeLight.ttf"; path = "../assets/fonts/ManropeLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C0C2F2B7E82C481B8EC69901 /* ManropeMedium.ttf */ = {isa = PBXFileReference; name = "ManropeMedium.ttf"; path = "../assets/fonts/ManropeMedium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AA22D9376E534EDC90404C24 /* ManropeRegular.ttf */ = {isa = PBXFileReference; name = "ManropeRegular.ttf"; path = "../assets/fonts/ManropeRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8C281B3A12734DBE812FC41F /* ManropeSemiBold.ttf */ = {isa = PBXFileReference; name = "ManropeSemiBold.ttf"; path = "../assets/fonts/ManropeSemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7E71BBF3820F459385A427A8 /* PoppinsBold.ttf */ = {isa = PBXFileReference; name = "PoppinsBold.ttf"; path = "../assets/fonts/PoppinsBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F66ED82AF02F4B15AE63C951 /* PoppinsExtraLight.ttf */ = {isa = PBXFileReference; name = "PoppinsExtraLight.ttf"; path = "../assets/fonts/PoppinsExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F72B5783944E4DE09190021E /* PoppinsMedium.ttf */ = {isa = PBXFileReference; name = "PoppinsMedium.ttf"; path = "../assets/fonts/PoppinsMedium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		57E41532109345D38FC3FF47 /* PoppinsRegular.ttf */ = {isa = PBXFileReference; name = "PoppinsRegular.ttf"; path = "../assets/fonts/PoppinsRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6236169D53874487BC9C1B90 /* PoppinsSemiBold.ttf */ = {isa = PBXFileReference; name = "PoppinsSemiBold.ttf"; path = "../assets/fonts/PoppinsSemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AD45A38747EE439196FE28C1 /* FontspringDEMOrocgroteskbold.otf */ = {isa = PBXFileReference; name = FontspringDEMOrocgroteskbold.otf; path = ../assets/fonts/FontspringDEMOrocgroteskbold.otf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ABA51AD35B634779A26F2E14 /* FontspringDEMOrocgroteskcompbold.otf */ = {isa = PBXFileReference; name = FontspringDEMOrocgroteskcompbold.otf; path = ../assets/fonts/FontspringDEMOrocgroteskcompbold.otf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C4E400C1779842E098667506 /* FontspringDEMOrocgroteskcompmedium.otf */ = {isa = PBXFileReference; name = FontspringDEMOrocgroteskcompmedium.otf; path = ../assets/fonts/FontspringDEMOrocgroteskcompmedium.otf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1DEC0E35329C48B2B1004D62 /* FontspringDEMOrocgroteskcompregular.otf */ = {isa = PBXFileReference; name = FontspringDEMOrocgroteskcompregular.otf; path = ../assets/fonts/FontspringDEMOrocgroteskcompregular.otf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1A212182D91246438AF54EBE /* FontspringDEMOrocgroteskmedium.otf */ = {isa = PBXFileReference; name = FontspringDEMOrocgroteskmedium.otf; path = ../assets/fonts/FontspringDEMOrocgroteskmedium.otf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		98ECA66AC9D6452D8E335604 /* FontspringDEMOrocgroteskregular.otf */ = {isa = PBXFileReference; name = FontspringDEMOrocgroteskregular.otf; path = ../assets/fonts/FontspringDEMOrocgroteskregular.otf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5CA8DFB3E54E443D90205B02 /* FontspringDEMOrocgroteskthin.otf */ = {isa = PBXFileReference; name = FontspringDEMOrocgroteskthin.otf; path = ../assets/fonts/FontspringDEMOrocgroteskthin.otf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E2790A2EF8714C928F786A88 /* ManropeBold.ttf */ = {isa = PBXFileReference; name = ManropeBold.ttf; path = ../assets/fonts/ManropeBold.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4633A5CD809D482680639243 /* ManropeExtraBold.ttf */ = {isa = PBXFileReference; name = ManropeExtraBold.ttf; path = ../assets/fonts/ManropeExtraBold.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4750F8C2E78E406DA49CE086 /* ManropeExtraLight.ttf */ = {isa = PBXFileReference; name = ManropeExtraLight.ttf; path = ../assets/fonts/ManropeExtraLight.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5D09CDD2A8F94A71855FE398 /* ManropeLight.ttf */ = {isa = PBXFileReference; name = ManropeLight.ttf; path = ../assets/fonts/ManropeLight.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C0C2F2B7E82C481B8EC69901 /* ManropeMedium.ttf */ = {isa = PBXFileReference; name = ManropeMedium.ttf; path = ../assets/fonts/ManropeMedium.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AA22D9376E534EDC90404C24 /* ManropeRegular.ttf */ = {isa = PBXFileReference; name = ManropeRegular.ttf; path = ../assets/fonts/ManropeRegular.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8C281B3A12734DBE812FC41F /* ManropeSemiBold.ttf */ = {isa = PBXFileReference; name = ManropeSemiBold.ttf; path = ../assets/fonts/ManropeSemiBold.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7E71BBF3820F459385A427A8 /* PoppinsBold.ttf */ = {isa = PBXFileReference; name = PoppinsBold.ttf; path = ../assets/fonts/PoppinsBold.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F66ED82AF02F4B15AE63C951 /* PoppinsExtraLight.ttf */ = {isa = PBXFileReference; name = PoppinsExtraLight.ttf; path = ../assets/fonts/PoppinsExtraLight.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F72B5783944E4DE09190021E /* PoppinsMedium.ttf */ = {isa = PBXFileReference; name = PoppinsMedium.ttf; path = ../assets/fonts/PoppinsMedium.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		57E41532109345D38FC3FF47 /* PoppinsRegular.ttf */ = {isa = PBXFileReference; name = PoppinsRegular.ttf; path = ../assets/fonts/PoppinsRegular.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6236169D53874487BC9C1B90 /* PoppinsSemiBold.ttf */ = {isa = PBXFileReference; name = PoppinsSemiBold.ttf; path = ../assets/fonts/PoppinsSemiBold.ttf; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +153,7 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
-		83CBB9F61A601CBA00E9B192 = {
+		83CBB9F61A601CBA00E9B192 /* PBXGroup */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAE1A68108700A75B9A /* Cashii_RN */,
@@ -190,7 +190,7 @@
 			sourceTree = "<group>";
 		};
 		45F33C218AE840B293D10D71 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				AD45A38747EE439196FE28C1 /* FontspringDEMOrocgroteskbold.otf */,
 				ABA51AD35B634779A26F2E14 /* FontspringDEMOrocgroteskcompbold.otf */,
@@ -264,14 +264,14 @@
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+		83CBB9F71A601CBA00E9B192 = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
+						TestTargetID = 13B07F861A680F5B00A75B9A /* Cashii_RN */;
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
@@ -286,7 +286,7 @@
 				en,
 				Base,
 			);
-			mainGroup = 83CBB9F61A601CBA00E9B192;
+			mainGroup = 83CBB9F61A601CBA00E9B192 /* PBXGroup */;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,7 +350,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+			shellScript = "if [[ -f \"$PODS_ROOT/../.xcode.env\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env\"\nfi\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n# The project root by default is one level up from the ios directory\nexport PROJECT_ROOT=\"$PROJECT_DIR\"/..\n\nif [[ \"$CONFIGURATION\" = *Debug* ]]; then\n  export SKIP_BUNDLING=1\nfi\nif [[ -z \"$ENTRY_FILE\" ]]; then\n  # Set the entry JS file using the bundler's entry resolution.\n  export ENTRY_FILE=\"$(\"$NODE_BINARY\" -e \"require('expo/scripts/resolveAppEntry')\" \"$PROJECT_ROOT\" ios absolute | tail -n 1)\"\nfi\n\nif [[ -z \"$CLI_PATH\" ]]; then\n  # Use Expo CLI\n  export CLI_PATH=\"$(\"$NODE_BINARY\" --print \"require.resolve('@expo/cli')\")\"\nfi\nif [[ -z \"$BUNDLE_COMMAND\" ]]; then\n  # Default Expo CLI command for bundling\n  export BUNDLE_COMMAND=\"export:embed\"\nfi\n\n`\"$NODE_BINARY\" --print \"require('path').dirname(require.resolve('react-native/package.json')) + '/scripts/react-native-xcode.sh'\"`\n";
 		};
 		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -769,5 +769,5 @@
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+	rootObject = 83CBB9F71A601CBA00E9B192;
 }
