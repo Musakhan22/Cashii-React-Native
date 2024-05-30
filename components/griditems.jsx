@@ -7,57 +7,7 @@ import {
 
 import appColors from '../components/appcolors';
 
-const Griditems = () => {
-    const DATA = [
-  {
-    id: '1. ',
-    title: 'mean',
-  },
-  {
-    id: '2. ',
-    title: 'moral',
-  },
-  {
-    id: '3. ',
-    title: 'corals',
-  },
-  {
-    id: '4. ',
-    title: 'Champion',
-  },
-  {
-    id: '5. ',
-    title: 'busy',
-  },
-  {
-    id: '6. ',
-    title: 'measure',
-  },
-  {
-    id: '7. ',
-    title: 'veteran',
-  },
-  {
-    id: '8. ',
-    title: 'rice',
-  },
-  {
-    id: '9. ',
-    title: 'decorate',
-  },
-  {
-    id: '10. ',
-    title: 'trash',
-  },
-  {
-    id: '11. ',
-    title: 'design',
-  },
-  {
-    id: '12. ',
-    title: 'brass',
-  },
-];
+const Griditems = ({data}) => {
 
 const renderItem = ({item}) => {
   return (
@@ -70,7 +20,7 @@ const renderItem = ({item}) => {
   );
 };
   return (
-    <FlatList data={DATA}
+    <FlatList data={data}
     renderItem={renderItem}
     style={styles.liststyle}
     numColumns={2}

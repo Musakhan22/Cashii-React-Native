@@ -55,8 +55,8 @@ const Textinput = () => {
             key={index}
             style={[isFocused === true ? styles.focusCell : styles.cell]}
             onLayout={getCellOnLayoutHandler(index)}>
-            <Text style={isFocused ? styles.focustext : styles.cellText}>
-              {symbol ? '*' : isFocused ? <Cursor /> : '-'}
+            <Text style={[isFocused ? styles.focustext : styles.cellText]}>
+              {symbol ? '*' : isFocused ? <Cursor /> : '_'}
               {/* {symbol || (isFocused ? <Cursor /> : null)} */}
             </Text>
           </View>
@@ -81,13 +81,14 @@ const styles = StyleSheet.create({
     fontSize: 24,
     borderRadius: 16,
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     backgroundColor: appColors.Btnblack,
     marginHorizontal: wp('1%'),
   },
   focusCell: {
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
+    textAlign:'center',
     width: wp('16%'),
     height: hp('9%'),
     fontSize: 24,
@@ -98,6 +99,7 @@ const styles = StyleSheet.create({
   focustext: {
     alignItems: 'center',
     justifyContent: 'center',
+        textAlign:'center',
     color: appColors.maincolor,
     fontSize: 18,
     fontFamily: 'PoppinsMedium',
@@ -106,5 +108,8 @@ const styles = StyleSheet.create({
     color: appColors.maincolor,
     fontSize: 18,
     fontFamily: 'PoppinsMedium',
+  },
+  inputext:{
+    textAlign:'center',
   },
 });

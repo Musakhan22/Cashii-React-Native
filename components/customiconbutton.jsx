@@ -1,15 +1,19 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 import appColors from '../components/appcolors';
 
-const Customiconbutton = () => {
+const Customiconbutton = ({onPress}) => {
   return (
-            <View style={styles.iconcontainer}></View>
+            <TouchableOpacity style={styles.iconcontainer} onPress={onPress}>
+              <Icon name={'copy'} size={17} color={appColors.maincolor} />
+            </TouchableOpacity>
 
   );
 };
@@ -20,10 +24,10 @@ const styles = StyleSheet.create({
   iconcontainer:{
     height: hp('3.4%'),
     width: wp('7%'),
-    borderWidth:2,
-    borderRadius:20,
+    borderRadius:30,
     backgroundColor:appColors.Btnblack,
-    marginHorizontal:hp('2%'),
+    marginHorizontal:hp('1%'),
     alignItems:'center',
+    justifyContent:'center',
   },
 });
