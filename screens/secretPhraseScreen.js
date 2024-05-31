@@ -16,54 +16,18 @@ import Custombutton from '../components/custombutton';
 
 const SecretPhraseScreen = () => {
   const DATA = [
-    {
-      id: '0. ',
-      title: 'mean',
-    },
-    {
-      id: '1. ',
-      title: 'moral',
-    },
-    {
-      id: '2. ',
-      title: 'corals',
-    },
-    {
-      id: '3. ',
-      title: 'Champion',
-    },
-    {
-      id: '4. ',
-      title: 'busy',
-    },
-    {
-      id: '5. ',
-      title: 'measure',
-    },
-    {
-      id: '6. ',
-      title: 'veteran',
-    },
-    {
-      id: '7. ',
-      title: 'rice',
-    },
-    {
-      id: '8. ',
-      title: 'decorate',
-    },
-    {
-      id: '9. ',
-      title: 'trash',
-    },
-    {
-      id: '10. ',
-      title: 'design',
-    },
-    {
-      id: '11. ',
-      title: 'brass',
-    },
+    {id: '0 ', title: 'mean'},
+    {id: '1 ', title: 'moral'},
+    {id: '2 ', title: 'corals'},
+    {id: '3 ', title: 'Champion'},
+    {id: '4 ', title: 'busy'},
+    {id: '5 ', title: 'measure'},
+    {id: '6 ', title: 'veteran'},
+    {id: '7 ', title: 'rice'},
+    {id: '8 ', title: 'decorate'},
+    {id: '9 ', title: 'trash'},
+    {id: '10 ', title: 'design'},
+    {id: '11 ', title: 'brass'},
   ];
   const navigation = useNavigation();
   const datas = DATA.map(item => item.title);

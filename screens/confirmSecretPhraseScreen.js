@@ -1,4 +1,5 @@
 import {
+  Alert,
   SafeAreaView,
   StyleSheet,
   Text,
@@ -25,12 +26,11 @@ const ConfirmSecretPhraseScreen = ({route}) => {
   const {data} = route.params;
   const [selectedTexts, setSelectedTexts] = useState([]);
 
-  const handleAddToSelected = item => {
-    if (
-      selectedTexts.length < 11 &&
-      selectedTexts.some(text => text.id === item.id)
-    ) {
-      setSelectedTexts(prevSelectedTexts => [...prevSelectedTexts, item]);
+  const addName = item => {
+    if (selectedTexts.includes(item)) {
+      Alert.alert('This Item already exists in the list.');
+    } else {
+      setSelectedTexts([...selectedTexts, item]);
     }
   };
 
@@ -38,21 +38,26 @@ const ConfirmSecretPhraseScreen = ({route}) => {
     setSelectedTexts(selectedTexts.filter(text => text !== item));
   };
 
-  //   const [clipboardText, setClipboardText] = useState('');
-
-  //   const handlePaste = async () => {
-  //     const textFromClipboard = await Clipboard.getString();
-  //     setClipboardText(textFromClipboard);
-  //   };
-
-  //   const splitClipboardText = clipboardText ? clipboardText.split(' ') : [];
-
   const renderItem = ({item, index}) => (
-    //   <Itemcapsule key={index} data={splitClipboardText[index]} />
     <TouchableOpacity
-      style={styles.button}
-      onPress={() => handleAddToSelected(item)}>
-      <Text style={styles.buttontxt}>{item}</Text>
+      style={[
+        styles.button,
+        {
+          backgroundColor: selectedTexts.includes(item)
+            ? appColors.txtgrey
+            : appColors.Btnblack,
+        },
+      ]}
+      onPress={() => addName(item)}>
+      <Text
+        style={[
+          styles.buttontxt,
+          {
+            color: appColors.maincolor,
+          },
+        ]}>
+        {item}
+      </Text>
     </TouchableOpacity>
   );
 
@@ -75,47 +80,30 @@ const ConfirmSecretPhraseScreen = ({route}) => {
         </Text>
       </View>
       <View style={styles.itemcontainer}>
-        {/* {splitClipboardText.length === 0 ? (
-          <View style={{alignItems: 'center', justifyContent: 'center'}}></View>
-        ) : (
-          <FlatList
-            data={splitClipboardText.length > 0 ? splitClipboardText : data}
-            renderItem={renderItem}
-            keyExtractor={(item, index) => index.toString()}
-            numColumns={3}
-            columnWrapperStyle={{
-              justifyContent: 'space-between',
-              marginBottom: 11,
-            }}
-            contentContainerStyle={styles.itemslist}
-          />
-        )} */}
         <FlatList
           data={selectedTexts}
           renderItem={renderSelectedItem}
           numColumns={3}
-          keyExtractor={(item, index) => index.toString}
+          keyExtractor={(item, index) => index.toString()}
           contentContainerStyle={{
             flexGrow: 0,
             marginVertical: hp('2%'),
-            marginHorizontal: wp('2%'),
           }}
           columnWrapperStyle={{
             alignItems: 'flex-start',
             justifyContent: 'space-evenly',
-            width: wp('76%'),
+            width: wp('78%'),
             marginVertical: hp('1%'),
           }}
         />
       </View>
       <View style={styles.middlecontainer}>
-        {/* <Customiconbutton />
-        <Text>Paste</Text> */}
         <FlatList
           data={data}
           renderItem={renderItem}
           numColumns={3}
           contentContainerStyle={{flexGrow: 0}}
+          keyExtractor={(item, index) => index.toString()}
         />
       </View>
       <View style={styles.endcon}>
@@ -203,13 +191,13 @@ const styles = StyleSheet.create({
     marginHorizontal: wp('3%'),
     marginVertical: hp('0.7%'),
     borderRadius: 8,
-    backgroundColor: appColors.Btnblack,
+    // backgroundColor: appColors.Btnblack,
     alignItems: 'center',
     justifyContent: 'center',
   },
   buttontxt: {
     fontFamily: 'PoppinsMedium',
-    color: appColors.maincolor,
+    // color: appColors.maincolor,
     fontSize: 14,
   },
   endcon: {

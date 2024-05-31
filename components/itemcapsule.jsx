@@ -8,7 +8,7 @@ import {
 import appColors from '../components/appcolors';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const Itemcapsule = ({data, onPress}) => {
+const Itemcapsule = ({data, onPress,color}) => {
   return (
     <TouchableOpacity style={styles.main} onPress={onPress}>
       <Text style={styles.text}>{data}</Text>
