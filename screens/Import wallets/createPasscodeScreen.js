@@ -1,5 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useNavigation} from '@react-navigation/native';
 import {
@@ -7,11 +8,11 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-import appColors from '../components/appcolors';
-import Backbutton from '../components/backbutton';
-import Textinput from '../components/textinput';
+import appColors from '../../components/appcolors';
+import Backbutton from '../../components/backbutton';
+import Textinput from '../../components/textinput';
 
-const CreatePasswordScreen = () => {
+const CreatePasscodeScreen = () => {
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.main}>
@@ -28,12 +29,12 @@ const CreatePasswordScreen = () => {
         </Text>
         <Text style={styles.subtitletext}>the app.</Text>
       </View>
-      <Textinput/>
+      <Textinput navigate={'enterSecretPasscode'} />
     </SafeAreaView>
   );
 };
 
-export default CreatePasswordScreen;
+export default CreatePasscodeScreen;
 
 const styles = StyleSheet.create({
   main: {

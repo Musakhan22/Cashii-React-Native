@@ -7,12 +7,12 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-import appColors from '../components/appcolors';
-import Backbutton from '../components/backbutton';
-import Griditems from '../components/griditems';
-import Customiconbutton from '../components/customiconbutton';
-import Warningtext from '../components/warningtext';
-import Custombutton from '../components/custombutton';
+import appColors from '../../components/appcolors';
+import Backbutton from '../../components/backbutton';
+import Griditems from '../../components/griditems';
+import Customiconbutton from '../../components/customiconbutton';
+import Warningtext from '../../components/warningtext';
+import Custombutton from '../../components/custombutton';
 
 const SecretPhraseScreen = () => {
   const DATA = [
@@ -31,6 +31,7 @@ const SecretPhraseScreen = () => {
   ];
   const navigation = useNavigation();
   const datas = DATA.map(item => item.title);
+  const shuffleddata = datas.sort();
 
   const copyToClipboard = () => {
     const data = DATA.map(item => item.title);
@@ -72,7 +73,7 @@ const SecretPhraseScreen = () => {
           color={appColors.Btnblack}
           textclr={appColors.maincolor}
           onpress={() =>
-            navigation.navigate('confirmSecretPassword', {data: datas})
+            navigation.navigate('confirmSecretPassword', {data: shuffleddata})
           }
         />
       </View>

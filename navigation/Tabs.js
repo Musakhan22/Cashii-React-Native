@@ -10,8 +10,8 @@ import Icons from 'react-native-vector-icons/MaterialIcons';
 
 import DashboardScreen from '../screens/dashboardScreen';
 import appColors from '../components/appcolors';
-import SendScreen from '../screens/sendScreen';
-import SettingsScreen from '../screens/settingsScreen';
+import SendScreen from '../screens/Send/sendScreen';
+import SettingsScreen from '../screens/Settings/settingsScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,10 +29,14 @@ export function Tabs() {
         options={{
           tabBarIcon: ({focused}) => (
             <View style={styles.imgcontainer}>
-              <Icon
+              {/* <Icon
                 name="house-chimney"
                 color={focused ? appColors.maingreen : appColors.txtgrey}
                 size={20}
+              /> */}
+              <Image
+                source={require('../assets/images/home.png')}
+                tintColor={focused ? appColors.maingreen : appColors.txtgrey}
               />
               <Text
                 style={{
@@ -52,10 +56,14 @@ export function Tabs() {
         options={{
           tabBarIcon: ({focused}) => (
             <View style={styles.imgcontainer}>
-              <Icon
+              {/* <Icon
                 name="wallet"
                 color={focused ? appColors.maingreen : appColors.txtgrey}
                 size={20}
+              /> */}
+              <Image
+                source={require('../assets/images/wallet.png')}
+                tintColor={focused ? appColors.maingreen : appColors.txtgrey}
               />
               <Text
                 style={{
@@ -75,10 +83,14 @@ export function Tabs() {
         options={{
           tabBarIcon: ({focused}) => (
             <View style={styles.imgcontainer}>
-              <Icons
+              {/* <Icons
                 name="settings"
                 color={focused ? appColors.maingreen : appColors.txtgrey}
                 size={20}
+              /> */}
+              <Image
+                source={require('../assets/images/setting.png')}
+                tintColor={focused ? appColors.maingreen : appColors.txtgrey}
               />
               <Text
                 style={{
@@ -98,7 +110,7 @@ export function Tabs() {
 
 const styles = StyleSheet.create({
   tabBar: {
-    height: hp('10%'),
+    height: hp('9%'),
     elevation: 0,
     borderRadius: 24,
     position: 'absolute',

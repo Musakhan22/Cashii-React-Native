@@ -13,13 +13,13 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-import appColors from '../components/appcolors';
+import appColors from '../../components/appcolors';
 
-import Backbutton from '../components/backbutton';
+import Backbutton from '../../components/backbutton';
 import {FlatList} from 'react-native-gesture-handler';
-import Warningtext from '../components/warningtext';
-import Custombutton from '../components/custombutton';
-import Itemcapsule from '../components/itemcapsule';
+import Warningtext from '../../components/warningtext';
+import Custombutton from '../../components/custombutton';
+import Itemcapsule from '../../components/itemcapsule';
 
 const ConfirmSecretPhraseScreen = ({route}) => {
   const navigation = useNavigation();

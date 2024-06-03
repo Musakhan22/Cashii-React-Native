@@ -16,7 +16,7 @@ import appColors from './appcolors';
 
 const CELL_COUNT = 5;
 
-const Textinput = () => {
+const Textinput = ({navigate}) => {
   const [value, setValue] = useState('');
   const ref = useBlurOnFulfill({value, cellCount: CELL_COUNT});
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -28,10 +28,10 @@ const Textinput = () => {
   useEffect(() => {
     if (value.length === CELL_COUNT) {
       console.log(value);
-      navigation.navigate('secretPhrase');
+      navigation.navigate(navigate);
       setValue('');
     }
-  }, [navigation, value]);
+  }, [navigate, navigation, value]);
 
   return (
     <SafeAreaView style={styles.root}>

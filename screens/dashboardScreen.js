@@ -8,8 +8,9 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import appColors from '../components/appcolors';
-import Pointsbutton from '../components/pointsButton';
+// import Pointsbutton from '../components/pointsButton';
 import {FlatList} from 'react-native-gesture-handler';
+import Pointsbutton from '../components/pointsbutton';
 
 const DashboardScreen = () => {
   const DATA = [
@@ -65,7 +66,6 @@ const DashboardScreen = () => {
           <Text style={styles.subtitletxt}>$ 0.00</Text>
         </View>
       </View>
-
       <View style={styles.body}>
         <View style={styles.headertextbody}>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -93,14 +93,14 @@ const DashboardScreen = () => {
           </View>
         </View>
         <Pointsbutton onPress={() => console.log('tapped')} />
-        <View style={styles.listItemcon}>
+        {/* <View style={styles.listItemcon}>
           <FlatList
             data={DATA}
             renderItem={renderItem}
             keyExtractor={(item, index) => index.toString()}
             contentContainerStyle={{flexGrow: 0, alignItems: 'center'}}
           />
-        </View>
+        </View> */}
       </View>
     </SafeAreaView>
   );

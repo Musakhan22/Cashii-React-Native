@@ -1,28 +1,28 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {useNavigation} from '@react-navigation/native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-import appColors from '../components/appcolors';
-import Backbutton from '../components/backbutton';
-import Custombutton from '../components/custombutton';
+import appColors from '../../components/appcolors';
+import Custombutton from '../../components/custombutton';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
-const WalletCreationScreen = () => {
+const ConfirmWalletAddedScreen = () => {
   const navigation = useNavigation();
+
   return (
     <SafeAreaView style={styles.main}>
-      <View style={styles.backbuttoncon}>
+      {/* <View style={styles.backbuttoncon}>
         <Backbutton onPress={() => navigation.goBack()} />
-      </View>
+      </View> */}
       <View style={styles.successCon}>
-        <Image source={require('../assets/images/confirm.png')} />
+        <Image source={require('../../assets/images/confirm.png')} />
       </View>
       <View style={styles.headercon}>
-        <Text style={styles.headertext}>Wallet Created</Text>
+        <Text style={styles.headertext}>Wallet Added</Text>
       </View>
       <View style={styles.subtitlecon}>
         <Text style={styles.subtitletext}>
@@ -42,7 +42,7 @@ const WalletCreationScreen = () => {
   );
 };
 
-export default WalletCreationScreen;
+export default ConfirmWalletAddedScreen;
 
 const styles = StyleSheet.create({
   main: {

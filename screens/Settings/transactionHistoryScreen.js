@@ -1,14 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const SendScreen = () => {
+const TransactionHistoryScreen = () => {
   return (
     <View>
-      <Text>SendScreen</Text>
+      <Text>TransactionHistoryScreen</Text>
     </View>
   );
 };
 
-export default SendScreen;
+export default TransactionHistoryScreen;
 
 const styles = StyleSheet.create({});

@@ -10,6 +10,7 @@ const appColors = {
   subtxtgry: '#7B8497',
   subgreycon: 'rgba(123, 132, 151, 0.12)',
   txtorg: '#FFAC33',
+  clrred: 'rgba(248, 20, 20, 1)',
 };
 
 export default appColors;

@@ -30,7 +30,7 @@ const ConnectWalletScreen = () => {
       </View>
       <View style={{marginTop: hp('4%')}}>
         <Walletselectorbutton
-          onpress={null}
+          onpress={() => navigation.navigate('createPasscode')}
           icon={'arrow-down'}
           text={'I already have a wallet'}
           footertext={'Import a wallet.'}
