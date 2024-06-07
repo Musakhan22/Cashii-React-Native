@@ -9,9 +9,16 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import appColors from './appcolors';
 import Pointsbutton from './pointsbutton';
 import Activitiescontainer from './activitiescontainer';
-import { ScrollView } from 'react-native-gesture-handler';
+import { DATA } from '../data/dummydata';
 
 const Pointscontainer = ({data}) => {
+  const handleSelect = item => {
+    console.log('Selected item:', item.text);
+  };
+  const points = DATA.map(item => ({
+    title: item.text,
+    points: item.value,
+  }));
   return (
           <View>
           <View style={styles.middleItemcon}>
@@ -39,13 +46,13 @@ const Pointscontainer = ({data}) => {
           <Text style={styles.middletxt}>Activities</Text>
         </View>
         <View style={styles.bottomcon}>
-         <Activitiescontainer data={data} image={require('../assets/images/coin.png')} title={'Receive Reward'} icon={'chevron-down-sharp'} selecion={true} points={500}/>
-        <Activitiescontainer data={data} image={require('../assets/images/Dark-1.png')} title={'Twitter Follow'} traling={'500'} selecion={false} />
-        <Activitiescontainer image={require('../assets/images/telegram.png')} title={'Telegram Follow'} traling={'500'} selecion={false} />
-        <Activitiescontainer image={require('../assets/images/coin-1.png')} title={'Daily Reward'} icon={'chevron-down-sharp'} selecion={true} points={200}/>
-        <Activitiescontainer image={require('../assets/images/coin-1.png')} title={'Welcome Bonus'} icon={'chevron-down-sharp'} selecion={true} points={1000}/>
-        <Activitiescontainer image={require('../assets/images/send-reward.png')} title={'Send Reward'} icon={'chevron-down-sharp'} selecion={true} points={500} />
-        <Activitiescontainer image={require('../assets/images/users.png')} title={'Invite Friend Reward'} icon={'chevron-down-sharp'} selecion={true} points={500} />
+         <Activitiescontainer data1={data} image={require('../assets/images/coin.png')} title={'Receive Reward'} icon={'chevron-down-sharp'} selecion={true} points={500}/>
+        <Activitiescontainer  data1={data} image={require('../assets/images/Dark-1.png')} title={'Twitter Follow'} traling={'500'} selecion={false} />
+        <Activitiescontainer data1={data} image={require('../assets/images/telegram.png')} title={'Telegram Follow'} traling={'500'} selecion={false} />
+        <Activitiescontainer data1={data} image={require('../assets/images/coin-1.png')} title={'Daily Reward'} icon={'chevron-down-sharp'} selecion={true} points={200}/>
+        <Activitiescontainer data1={data} image={require('../assets/images/coin-1.png')} title={'Welcome Bonus'} icon={'chevron-down-sharp'} selecion={true} points={1000}/>
+        <Activitiescontainer data1={data} image={require('../assets/images/send-reward.png')} title={'Send Reward'} icon={'chevron-down-sharp'} selecion={true} points={500} />
+        <Activitiescontainer data1={data} image={require('../assets/images/users.png')} title={'Invite Friend Reward'} icon={'chevron-down-sharp'} selecion={true} points={500} />
         </View>
     </View>
 

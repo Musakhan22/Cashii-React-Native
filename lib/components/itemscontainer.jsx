@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, Image, Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 
 import {
@@ -6,8 +6,43 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import appColors from './appcolors';
+import Clipboard from '@react-native-clipboard/clipboard';
 
 const Itemscontainer = ({image,title,subtitle}) => {
+  const onShare = async () => {
+  try {
+    const result = await Share.share({
+      message: 'xxcss3434s98csmnx8s03mmx98',
+      title: 'Your Wallet Address',
+    });
+
+    if (result.action === Share.sharedAction) {
+      if (result.activityType) {
+        // Shared with activity type of result.activityType
+        console.log('Shared with activity type:', result.activityType);
+      } else {
+        // Shared
+        console.log('Shared successfully');
+      }
+    } else if (result.action === Share.dismissedAction) {
+      // Dismissed
+      console.log('Share dismissed');
+    }
+  } catch (error) {
+    console.error('Error sharing content:', error.message);
+  }
+};
+const copyToClipboard = () => {
+  //  const data = DATA.map(item => item.title);
+  const dataString = 'xxcss3434s98csmnx8s03mmx98';
+  if (typeof dataString === 'string') {
+    Clipboard.setString(dataString);
+    // console.log(dataString);
+    // Alert.alert('Copied to Clipboard');
+  } else {
+    Alert.alert('Error', 'Failed to copy to clipboard');
+  }
+};
   return (
    <View style={styles.itemscontainer}>
         <View style={styles.imgcon}>
@@ -16,12 +51,12 @@ const Itemscontainer = ({image,title,subtitle}) => {
         <View style={styles.headercon}>
             <View style={styles.topitemcon}>
         <Text style={styles.headertxt}>{title}</Text>
-        <View style={{width: wp('30%'),flexDirection:"row",alignItems:'center'}}>
-            <TouchableOpacity>
-        <Image style={{bottom:hp('0.5%'),marginHorizontal:wp('4%')}} source={require('../assets/images/share.png')} tintColor={'#292D32'}/>
+        <View style={{width: wp('23%'),height:hp('4%'),flexDirection:"row",alignItems:"center",justifyContent:"center",alignSelf:"center"}}>
+            <TouchableOpacity style={{marginHorizontal:wp('3.7%')}} onPress={() => onShare()}>
+        <Image source={require('../assets/images/share.png')} tintColor={'#292D32'}/>
             </TouchableOpacity>
-            <TouchableOpacity>
-        <Image style={{bottom:hp('0.5%')}} source={require('../assets/images/copy.png')} tintColor={'#292D32'}/>
+            <TouchableOpacity onPress={() => copyToClipboard()}>
+        <Image source={require('../assets/images/copy.png')} tintColor={'#292D32'}/>
             </TouchableOpacity>
         </View>
         <Text style={styles.endtxt}>0.00</Text>
@@ -61,7 +96,7 @@ const styles = StyleSheet.create({
     // borderWidth:2,
   },
   topitemcon:{
-    width: wp('70%'),
+    width: wp('77%'),
     height: hp('4%'),
     // borderWidth:2,
     flexDirection:'row',
@@ -70,7 +105,7 @@ const styles = StyleSheet.create({
     marginHorizontal:wp('1%'),
   },
   bottomcon:{
-     width: wp('70%'),
+     width: wp('76%'),
     height: hp('3%'),
     // borderWidth:2,
     flexDirection:'row',
@@ -84,25 +119,25 @@ headertxt:{
     fontSize:20,
     color:appColors.Btnblack,
     textAlign:'center',
-    marginLeft:wp('1%'),
+    // marginLeft:wp('1%'),
 },
 bottomtxt:{
      fontFamily:'PoppinsBold',
     fontSize:12,
     color:appColors.subtxt,
-    marginLeft:wp('1%'),
+    // marginLeft:wp('1%'),
 },
 endtxt:{
     fontFamily:'PoppinsSemiBold',
     fontSize:20,
     color:appColors.subtxt,
     textAlign:'center',
-    marginLeft:wp('10%'),
+    marginRight:wp('3%'),
 },
 endtxt1:{
     fontFamily:'PoppinsRegular',
     fontSize:12,
     color:appColors.subtxtgry,
-    marginLeft: wp('20%'),
+    marginRight: wp('3%'),
 },
 });
