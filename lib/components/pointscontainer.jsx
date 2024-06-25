@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import {
   widthPercentageToDP as wp,
@@ -12,13 +12,10 @@ import Activitiescontainer from './activitiescontainer';
 import { DATA } from '../data/dummydata';
 
 const Pointscontainer = ({data}) => {
-  const handleSelect = item => {
-    console.log('Selected item:', item.text);
-  };
-  const points = DATA.map(item => ({
-    title: item.text,
-    points: item.value,
-  }));
+
+  const renderItem = ({ item }) => (
+    <Activitiescontainer data1={item.data} selector={item.selector} image={item.image} title={item.title} trailing={item.points}  />
+  );
   return (
           <View>
           <View style={styles.middleItemcon}>
@@ -46,13 +43,7 @@ const Pointscontainer = ({data}) => {
           <Text style={styles.middletxt}>Activities</Text>
         </View>
         <View style={styles.bottomcon}>
-         <Activitiescontainer data1={data} image={require('../assets/images/coin.png')} title={'Receive Reward'} icon={'chevron-down-sharp'} selecion={true} points={500}/>
-        <Activitiescontainer  data1={data} image={require('../assets/images/Dark-1.png')} title={'Twitter Follow'} traling={'500'} selecion={false} />
-        <Activitiescontainer data1={data} image={require('../assets/images/telegram.png')} title={'Telegram Follow'} traling={'500'} selecion={false} />
-        <Activitiescontainer data1={data} image={require('../assets/images/coin-1.png')} title={'Daily Reward'} icon={'chevron-down-sharp'} selecion={true} points={200}/>
-        <Activitiescontainer data1={data} image={require('../assets/images/coin-1.png')} title={'Welcome Bonus'} icon={'chevron-down-sharp'} selecion={true} points={1000}/>
-        <Activitiescontainer data1={data} image={require('../assets/images/send-reward.png')} title={'Send Reward'} icon={'chevron-down-sharp'} selecion={true} points={500} />
-        <Activitiescontainer data1={data} image={require('../assets/images/users.png')} title={'Invite Friend Reward'} icon={'chevron-down-sharp'} selecion={true} points={500} />
+          <FlatList data={DATA} renderItem={renderItem} keyExtractor={(index,item) => index.id.toString() } />
         </View>
     </View>
 

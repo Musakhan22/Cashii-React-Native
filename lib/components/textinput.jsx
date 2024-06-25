@@ -1,4 +1,4 @@
-import {Platform, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {Alert, Platform, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 
@@ -13,11 +13,15 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import appColors from './appcolors';
+import { retrieveData, storeData } from '../Storage/asyncstorage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const CELL_COUNT = 5;
 
-const Textinput = ({navigate}) => {
+const Textinput = ({navigate,enteredpassword}) => {
   const [value, setValue] = useState('');
+  const [inputPassword, setInputPassword] = useState('');
+  const [savedPassword, setSavedPassword] = useState(null);
   const ref = useBlurOnFulfill({value, cellCount: CELL_COUNT});
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
     value,
@@ -25,21 +29,60 @@ const Textinput = ({navigate}) => {
   });
   const navigation = useNavigation();
 
+
   useEffect(() => {
-    if (value.length === CELL_COUNT) {
-      console.log(value);
-      navigation.navigate(navigate);
-      setValue('');
+    // const checkAndStorePassword = async () => {
+    //   if (value.length === CELL_COUNT) {
+    //     console.log(value);
+    //     const existingPassword = await AsyncStorage.getItem('password');
+    //     const savedPassword = await retrieveData('password');
+    //     if (!existingPassword) {
+    //       console.log('saved');
+    //       await storeData('password', value);
+    //     }else if(enteredpassword && enteredpassword === savedPassword){
+    //       console.log('passwords match');
+    //       navigation.navigate(navigate, { password: value });
+    //     }else{
+    //       console.log('Exists');
+    //       navigation.navigate(navigate, { password: value });
+    //       setValue('');
+    //     }
+    //   }
+    // };
+     const fetchPassword = async () => {
+      const password = await retrieveData('password');
+      setSavedPassword(password);
+    };
+
+    fetchPassword();
+  }, [enteredpassword, navigate, navigation]);
+
+  const handlePasswordInput = async (password) => {
+    setInputPassword(password);
+
+    if (password.length === 5) { // Assuming a 6-digit passcode
+      if (!savedPassword) {
+        console.log('Saving password...');
+        await storeData('password', password);
+        Alert.alert('Success', 'Password saved successfully');
+        navigation.navigate(navigate, { password });
+      } else if (password === savedPassword) {
+        console.log('Passwords match');
+        navigation.navigate(navigate, { password });
+      } else {
+        Alert.alert('Error', 'Password does not match the saved password');
+        setInputPassword('');
+      }
     }
-  }, [navigate, navigation, value]);
+  };
 
   return (
     <SafeAreaView style={styles.root}>
       <CodeField
         ref={ref}
-        value={value}
+        value={inputPassword}
         {...props}
-        onChangeText={setValue}
+        onChangeText={handlePasswordInput}
         cellCount={CELL_COUNT}
         rootStyle={styles.codeFieldRoot}
         keyboardType="number-pad"

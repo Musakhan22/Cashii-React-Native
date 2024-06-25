@@ -13,8 +13,7 @@ const renderItem = ({item}) => {
   return (
     <View style={{flexDirection: 'row', marginHorizontal: wp('2%')}}>
       <View style={styles.itemcontainer}>
-        <Text style={styles.itemtext}>{item.id}</Text>
-        <Text style={styles.itemtext}>{item.title}</Text>
+        <Text style={styles.itemtext}>{item}</Text>
       </View>
     </View>
   );
@@ -24,7 +23,7 @@ const renderItem = ({item}) => {
     renderItem={renderItem}
     style={styles.liststyle}
     numColumns={2}
-    keyExtractor={item => item.id}
+    keyExtractor={(_item, index) => index}
   />
   );
 };

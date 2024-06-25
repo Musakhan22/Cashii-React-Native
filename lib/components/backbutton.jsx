@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {
   widthPercentageToDP as wp,
@@ -7,7 +7,6 @@ import {
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import appColors from './appcolors';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const Backbutton = ({icon, onPress}) => {
   return (

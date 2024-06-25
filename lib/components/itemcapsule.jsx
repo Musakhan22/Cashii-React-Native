@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import {
   widthPercentageToDP as wp,
@@ -6,7 +6,6 @@ import {
 } from 'react-native-responsive-screen';
 
 import appColors from './appcolors';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Itemcapsule = ({data, onPress,color}) => {
   return (

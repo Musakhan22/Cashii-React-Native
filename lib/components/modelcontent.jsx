@@ -1,6 +1,5 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -44,6 +43,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: hp('30%'),
     left: wp('2%'),
+    zIndex:10,
   },
   headercontainer: {
     width: wp('34%'),
@@ -85,18 +85,21 @@ const styles = StyleSheet.create({
     height:hp('6%'),
     width:wp('83%'),
     // borderWidth:2,
+    // backgroundColor:'red',
     marginLeft:wp('2%'),
     marginTop:hp('1%'),
     flexDirection:'row',
     alignItems:'center',
+    zIndex:12,
   },
   button1:{
     height: hp('6%'),
     width: wp('40%'),
-    backgroundColor:appColors.subtxtgry,
+    backgroundColor:'grey',
     borderRadius:12,
     alignItems:'center',
     justifyContent:'center',
+    // zIndex:20,
   },
   button2:{
     height: hp('6%'),

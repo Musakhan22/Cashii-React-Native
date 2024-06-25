@@ -1,18 +1,33 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Alert, Image, Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Clipboard from '@react-native-clipboard/clipboard';
 
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+
 import appColors from './appcolors';
-import Clipboard from '@react-native-clipboard/clipboard';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Itemscontainer = ({image,title,subtitle}) => {
-  const onShare = async () => {
+   const [wallets, setWallets] = useState('');
+
+  useEffect(() => {
+    fetchAddress();
+  },[]);
+
+  const fetchAddress = async () => {
+      const address = await AsyncStorage.getItem('walletaddress');
+      setWallets(address);
+      console.log('DATATAT', wallets);
+    };
+
+  const onShare = async (address) => {
   try {
     const result = await Share.share({
-      message: 'xxcss3434s98csmnx8s03mmx98',
+      message: address,
       title: 'Your Wallet Address',
     });
 
@@ -32,12 +47,13 @@ const Itemscontainer = ({image,title,subtitle}) => {
     console.error('Error sharing content:', error.message);
   }
 };
-const copyToClipboard = () => {
-  //  const data = DATA.map(item => item.title);
-  const dataString = 'xxcss3434s98csmnx8s03mmx98';
-  if (typeof dataString === 'string') {
-    Clipboard.setString(dataString);
-    // console.log(dataString);
+const copyToClipboard = address => {
+  if (typeof address === 'string') {
+    // const dataString = mnemonic.join(' ');
+    console.log('DATASTRING', address);
+
+    Clipboard.setString(address);
+    console.log('COPY', address);
     // Alert.alert('Copied to Clipboard');
   } else {
     Alert.alert('Error', 'Failed to copy to clipboard');
@@ -50,14 +66,17 @@ const copyToClipboard = () => {
         </View>
         <View style={styles.headercon}>
             <View style={styles.topitemcon}>
+              <View style={styles.topitems}>
         <Text style={styles.headertxt}>{title}</Text>
-        <View style={{width: wp('23%'),height:hp('4%'),flexDirection:"row",alignItems:"center",justifyContent:"center",alignSelf:"center"}}>
-            <TouchableOpacity style={{marginHorizontal:wp('3.7%')}} onPress={() => onShare()}>
+        <View style={{width: wp('23%'),height:hp('4%'),flexDirection:"row",alignItems:"center",}}>
+            <TouchableOpacity style={{marginHorizontal:wp('3.7%')}} onPress={() => onShare(wallets)}>
         <Image source={require('../assets/images/share.png')} tintColor={'#292D32'}/>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => copyToClipboard()}>
+            <TouchableOpacity onPress={() => copyToClipboard(wallets)}>
         <Image source={require('../assets/images/copy.png')} tintColor={'#292D32'}/>
             </TouchableOpacity>
+
+              </View>
         </View>
         <Text style={styles.endtxt}>0.00</Text>
         </View>
@@ -95,6 +114,14 @@ const styles = StyleSheet.create({
     width: wp('78%'),
     // borderWidth:2,
   },
+  topitems:{
+      width: wp('42%'),
+    height: hp('4%'),
+    // borderWidth:2,
+    flexDirection:'row',
+    alignItems:'flex-start',
+    justifyContent:'space-evenly',
+  },
   topitemcon:{
     width: wp('77%'),
     height: hp('4%'),
@@ -125,7 +152,7 @@ bottomtxt:{
      fontFamily:'PoppinsBold',
     fontSize:12,
     color:appColors.subtxt,
-    // marginLeft:wp('1%'),
+    marginLeft:wp('3%'),
 },
 endtxt:{
     fontFamily:'PoppinsSemiBold',

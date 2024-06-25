@@ -5,10 +5,12 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import appColors from './appcolors';
+
 import Itemscontainer from './itemscontainer';
 
 const CryptoContainer = () => {
+
+
   return (
     <View style={styles.middleItemcon}>
         <Itemscontainer image={require('../assets/images/bitcoin-1.png')} title={'Bitcoin'} subtitle={'BTC'} />
